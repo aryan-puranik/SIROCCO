@@ -1,0 +1,108 @@
+{
+  "split": "2026-03-01",
+  "features": [
+    "horizon_h",
+    "hour",
+    "dow",
+    "month",
+    "doy",
+    "is_day",
+    "zenith_deg",
+    "capacity_mw",
+    "tilt_deg",
+    "azimuth_deg",
+    "hub_height_m",
+    "y_lag0_mw",
+    "y_lag24_mw",
+    "nwp_ghi_wm2",
+    "nwp_dni_wm2",
+    "nwp_dhi_wm2",
+    "nwp_temp_c",
+    "nwp_rh_pct",
+    "nwp_cloud_pct",
+    "nwp_wind_ms_80",
+    "nwp_wind_ms_hub",
+    "nwp_pressure_hpa",
+    "y_physics_nwp_mw"
+  ],
+  "target": "residual_mw",
+  "tech": {
+    "solar": {
+      "train": {
+        "n": 52224,
+        "mae_mw": 5.883,
+        "mae_baseline_mw": 13.505,
+        "mae_skill": 0.5644,
+        "mae_pct_capacity": 1.22,
+        "pinball": {
+          "p10": 1.335,
+          "p50": 2.941,
+          "p90": 1.42
+        },
+        "coverage_80": 0.919,
+        "n_iter": {
+          "0.1": 180,
+          "0.5": 180,
+          "0.9": 180
+        }
+      },
+      "valid": {
+        "n": 17472,
+        "mae_mw": 6.959,
+        "mae_baseline_mw": 15.878,
+        "mae_skill": 0.5617,
+        "mae_pct_capacity": 1.44,
+        "pinball": {
+          "p10": 1.578,
+          "p50": 3.48,
+          "p90": 1.564
+        },
+        "coverage_80": 0.8948,
+        "n_iter": {
+          "0.1": 180,
+          "0.5": 180,
+          "0.9": 180
+        }
+      }
+    },
+    "wind": {
+      "train": {
+        "n": 52224,
+        "mae_mw": 83.805,
+        "mae_baseline_mw": 121.614,
+        "mae_skill": 0.3109,
+        "mae_pct_capacity": 8.99,
+        "pinball": {
+          "p10": 16.264,
+          "p50": 41.902,
+          "p90": 19.929
+        },
+        "coverage_80": 0.8149,
+        "n_iter": {
+          "0.1": 180,
+          "0.5": 180,
+          "0.9": 180
+        }
+      },
+      "valid": {
+        "n": 17472,
+        "mae_mw": 87.205,
+        "mae_baseline_mw": 125.842,
+        "mae_skill": 0.307,
+        "mae_pct_capacity": 9.36,
+        "pinball": {
+          "p10": 16.956,
+          "p50": 43.602,
+          "p90": 20.461
+        },
+        "coverage_80": 0.7995,
+        "n_iter": {
+          "0.1": 180,
+          "0.5": 180,
+          "0.9": 180
+        }
+      }
+    }
+  },
+  "elapsed_s": 10.0
+}

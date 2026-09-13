@@ -1,0 +1,9 @@
+site_id,name,tech,lat,lon,altitude_m,ba_code,ba_name,capacity_mw,timezone,tilt_deg,azimuth_deg,dc_ac_ratio,hub_height_m,rotor_d_m,turbine_type,storage_mwh,region
+CA_SOLAR_STAR,Solar Star (Antelope Valley),solar,34.7976,-118.3523,820,CISO,CAISO,579.0,America/Los_Angeles,25.0,180.0,1.28,,,,80.0,California
+CA_SOLAR_TOPAZ,Topaz Solar Farm,solar,35.3833,-120.0667,520,CISO,CAISO,550.0,America/Los_Angeles,25.0,180.0,1.25,,,,60.0,California
+CA_SOLAR_DSLF,Desert Sunlight,solar,33.8231,-115.4019,310,CISO,CAISO,550.0,America/Los_Angeles,20.0,180.0,1.22,,,,70.0,California
+CA_WIND_ALTA,Alta Wind Energy Center,wind,35.0333,-118.3167,900,CISO,CAISO,1548.0,America/Los_Angeles,,,,80.0,90.0,V90/3000,120.0,California
+TX_WIND_ROSCOE,Roscoe Wind Farm,wind,32.2681,-100.5553,730,ERCO,ERCOT,781.5,America/Chicago,,,,80.0,90.0,MHI 1.0 MW,90.0,Texas
+TX_WIND_CAPRICORN,Capricorn Ridge Wind,wind,31.9072,-100.905,700,ERCO,ERCOT,662.5,America/Chicago,,,,80.0,82.0,GE 1.5sle,80.0,Texas
+TX_WIND_HORSEHOLLOW,Horse Hollow Wind Energy Center,wind,32.243,-100.049,610,ERCO,ERCOT,735.5,America/Chicago,,,,80.0,77.0,GE 1.5sle,100.0,Texas
+TX_SOLAR_UPTON,Upton County Solar,solar,31.222,-102.135,850,ERCO,ERCOT,255.0,America/Chicago,25.0,180.0,1.3,,,,50.0,Texas
