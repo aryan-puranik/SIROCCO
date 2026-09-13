@@ -1,0 +1,27 @@
+{
+  "built_at": "2026-09-12T15:22:43.486795+00:00",
+  "sites": 8,
+  "weather_rows": 140160,
+  "generation_rows": 140160,
+  "ba_rows": 35040,
+  "panel_rows": 140160,
+  "train_h24_rows": 46528,
+  "forecast_rows": 576,
+  "start": "2024-09-01 00:00:00+00:00",
+  "end": "2026-08-31 23:00:00+00:00",
+  "capacity_mw_total": 5661.5,
+  "sources": {
+    "sites": "WRI Global Power Plant Database / EIA-860 identities",
+    "weather_historical": "NASA POWER hourly (MERRA-2), community=RE",
+    "weather_forecast": "MET Norway Locationforecast 2.0 (cloud\u2192GHI via Kasten-Czeplak)",
+    "generation": "Physics: isotropic POA + PV inverter clip; IEC Class II wind curve + density",
+    "demand": "Temperature-calibrated typical load (CAISO/ERCOT published mean/peak)",
+    "nwp_features": "MERRA-2 actuals + lead-time-scaled Gaussian/lognormal error (no look-ahead in magnitude)"
+  },
+  "notes": [
+    "Open-Meteo returned HTTP 429 (daily cap) from this network \u2014 NASA POWER is the drop-in historical source with the same columns.",
+    "EIA Grid Monitor returned 503 \u2014 BA demand is a temperature-driven model calibrated to published CAISO/ERCOT ranges, not Form 930.",
+    "y_physics_mw is the training target for the live demo (no public plant SCADA at these sites).",
+    "Over/under at BA level = net load in the lower/upper 12% of that BA's distribution."
+  ]
+}

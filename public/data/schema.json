@@ -1,0 +1,72 @@
+{
+  "sites": {
+    "grain": "1 row = 1 plant",
+    "pk": [
+      "site_id"
+    ],
+    "columns": [
+      "site_id",
+      "name",
+      "tech",
+      "lat",
+      "lon",
+      "altitude_m",
+      "ba_code",
+      "ba_name",
+      "capacity_mw",
+      "timezone",
+      "tilt_deg",
+      "azimuth_deg",
+      "dc_ac_ratio",
+      "hub_height_m",
+      "rotor_d_m",
+      "turbine_type",
+      "storage_mwh",
+      "region"
+    ]
+  },
+  "weather_hourly": {
+    "grain": "1 row = site \u00d7 hour",
+    "pk": [
+      "site_id",
+      "timestamp_utc"
+    ],
+    "source": "NASA POWER"
+  },
+  "generation_hourly": {
+    "grain": "1 row = site \u00d7 hour",
+    "pk": [
+      "site_id",
+      "timestamp_utc"
+    ],
+    "target": "y_physics_mw"
+  },
+  "ba_hourly": {
+    "grain": "1 row = BA \u00d7 hour",
+    "pk": [
+      "ba_code",
+      "timestamp_utc"
+    ]
+  },
+  "panel_hourly": {
+    "grain": "1 row = site \u00d7 hour (S \u22c8 W \u22c8 P \u22c8 D)",
+    "pk": [
+      "site_id",
+      "timestamp_utc"
+    ]
+  },
+  "model_train_h24": {
+    "grain": "1 row = site \u00d7 issue_time \u00d7 horizon",
+    "input": "nwp_* weather at valid time, lags at issue time, site params, calendar",
+    "output": "y_mw (physics on actual weather at t+h)",
+    "baseline": "y_physics_nwp_mw"
+  },
+  "forecast_72h": {
+    "grain": "1 row = site \u00d7 future hour",
+    "output": [
+      "q10_mw",
+      "q50_mw",
+      "q90_mw"
+    ]
+  }
+}
